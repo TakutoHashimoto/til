@@ -13,9 +13,11 @@ def func_2() -> None:
         print(f"func_2 - {n}")
 
 def main():
+    print("開始")
     with ThreadPoolExecutor(max_workers=2) as executor:
         executor.submit(func_1)
         executor.submit(func_2)
+    print("終了")
 
 
 if __name__ == "__main__":
